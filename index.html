@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body, h1, h2, h3, p, ul, li {
+            padding: 0;
+            margin: 0;
+        }
+
+        .main-content {
+            margin-top: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #0f0f0f;
+            padding: 1em;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar .title {
+            font-size: 1.5em;
+            color: white;
+            font-weight: 500;
+            margin-right: 2em;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 1em;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="file" id="fileInput" style="display: none;" multiple />
+    <div class="navbar">
+        <div class="title">NiiVue dcm2niix</div>
+        <ul>
+            <li><a id="fileSelection" href="#">Select DICOM</a></li>
+        </ul>
+    </div>
+
+    <canvas id="gl" class="main-content" height="480" width="640"></canvas>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
